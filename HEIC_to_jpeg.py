@@ -24,7 +24,7 @@ def convert_heic_to_jpeg_with_metadata(src_path: Path, dst_path: Path, quality=9
     # -all:all: copy all metadata groups where possible
     result = subprocess.run(
         [
-            ".\\exiftool-13.53_64\\exiftool",
+            ".\\third_party\\exiftool-13.53_64\\exiftool",
             "-overwrite_original",
             "-TagsFromFile", str(src_path),
             "-all:all",
